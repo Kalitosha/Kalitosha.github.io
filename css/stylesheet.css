@@ -9,7 +9,7 @@ html {
 }
 					
 body {
-	/*margin:0px;*/
+	
 	padding:0px;
 	width:100vw;	
 	margin-left:auto;
@@ -18,9 +18,7 @@ body {
 	background-color: rgb(45, 69, 72);
 	background-repeat: repeat-x;
 	background-position: center top;
-	
 	margin: 0;
-    /*display: flex;*/
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -42,7 +40,7 @@ body {
 	margin-right:auto;	
     padding-top: 20px;
 	width:100vw;
-	height: 600px;
+	height: 480px;
 	background-position: center top;
 	background-color: rgb(164, 216, 218);
 }
@@ -54,11 +52,10 @@ body {
 	margin-right:auto;
 }
 
-#main_container { /*внизу*/
+#main_container {
 
 	text-align:justify; /*значение justify растягивание текста по ширине  text-align:center;*/
 	padding-top: 10px;
-	
 	color: #93e4e3;	
 	height:500px;
 	width:70vw;
@@ -108,7 +105,7 @@ body {
 	color: rgb(118, 149, 158);
 }
 
-.header_content_mainline { /*Это где БМБ*/
+.header_content_mainline { 
 
 	text-align:center;
 	padding-top: 200px;
@@ -117,13 +114,6 @@ body {
 	width:100vw;
     height: 45px;	
 	font-family: 'Tenor Sans', sans-serif;
-	/*
-	font-family: 'Alegreya Sans', sans-serif;
-	font-family: 'Nunito', sans-serif;
-	font-family: 'Prata', serif;
-	font-family: 'Forum', cursive;
-	font-family: 'Underdog', cursive;
-	*/
     padding-bottom: 20px;
 }
 
