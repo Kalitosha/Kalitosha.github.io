@@ -120,7 +120,7 @@ body {
 .subtitle_content{
 	
 	text-align:center;
-	padding-top: 20px;
+	padding-top: 0px;
 	font-size:35px;	
 	color: hsla(194, 17%, 35%, 1);
 	width:100vw;
