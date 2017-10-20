@@ -66,7 +66,7 @@ body {
 	margin-right:auto;
 	font-family: 'Tenor Sans', sans-serif;
 	font-size:30px;
-	color: rgb(118, 149, 158);
+	color: rgb(95, 125, 134);
 }
 
 #logo_image {
@@ -131,20 +131,13 @@ body {
 	
 	text-align:center;
 	padding-top: 20px;
-	font-size:35px;
-	color: rgb(118, 149, 158);
+	font-size:35px;	
+	color: hsla(194, 17%, 35%, 1);
 	width:100vw;
     height: 45px;
 	font-family: 'Tenor Sans', sans-serif;
 	/*font-family: 'Prata', serif;*/
     padding-bottom: 20px;
-}
-
-#header_content_boxline {
-	font-size:35px;
-	color:#000000;
-	width:400px;
-	font-family: 'Tenor Sans', sans-serif;
 }
 
 #header_content_lowerline {
@@ -154,13 +147,6 @@ body {
 	width:400px;
 	font-family: 'Tenor Sans', sans-serif;
 }
-/*
-#header_content_boxcontent { 
-    width: 400px;
-	font-size:23px;
-	color:#333333;
-	font-family: 'Tenor Sans', sans-serif;
-}*/
 
 #header_content_lowerboxcontent {
 	width:100vw;
@@ -170,21 +156,11 @@ body {
 	color: #93e4e3;
 }
 
-#header_content_tagline {
-	margin-left:auto;
-	margin-right:auto;
-	background-color:RGB(24, 124, 168);
-	background-size: 100%;
-	font-size:18px;
-	color:#ffffff;
-	width:1349px;
-}
-
 #im {
 	width:400px;
 	float:right;
 	margin-left:15px;
 	text-align:justify;
-	display: inline-block; /* Строчно-блочный элемент */
+	display: inline-block;
 }
 
