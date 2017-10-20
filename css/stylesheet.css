@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 					
 html {
     display: block;
@@ -9,7 +8,6 @@ html {
 }
 					
 body {
-	
 	padding:0px;
 	width:100vw;	
 	margin-left:auto;
@@ -53,7 +51,6 @@ body {
 }
 
 #main_container {
-
 	text-align:justify; /*значение justify растягивание текста по ширине  text-align:center;*/
 	padding-top: 10px;
 	color: #93e4e3;	
@@ -82,12 +79,9 @@ body {
     margin-right: auto;
 	background-position: center top;
 	width:100vw;	
-	/*width: fit-content;*/
 	background-image: url(../images/bg2.png);
 	background-repeat: no-repeat;
 	background-size: cover;
-	
-	
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -106,7 +100,6 @@ body {
 }
 
 .header_content_mainline { 
-
 	text-align:center;
 	padding-top: 200px;
 	font-size:35px;
@@ -118,7 +111,6 @@ body {
 }
 
 .subtitle_content{
-	
 	text-align:center;
 	padding-top: 0px;
 	font-size:35px;	
