@@ -20,17 +20,11 @@ ul.icons {
 						font-size: 2em;
 					}
 					
-/*li:before {
-content: "\f092";  добавляем иконку дом 
-font-family: FontAwesome;
-color: #aaaaaa;
-margin-right: 10px; 
-}*/
 
 body {
 	margin:0px;
 	padding:0px;
-	width:1349px;	
+	width:1349;	
 	margin-left:auto;
 	margin-right:auto;	
 	background-attachment: scroll;
@@ -54,8 +48,7 @@ body {
 	margin-left:auto;
 	margin-right:auto;	
     padding-top: 20px;
-	width: 100%;
-	/*width:1349px;*/
+	width:1349px;
 	height: 700px;
 	background-position: center top;
 	background-color: rgb(164, 216, 218);
@@ -96,7 +89,8 @@ body {
 #top_bar_im1 {
 	margin-left: auto;
     margin-right: auto;
-	/*width: fit-content;*/
+	background-position: center top;
+	width: fit-content;
 	background-image: url(../images/bg2.png);
 	background-repeat: no-repeat;
 	background-size: cover;
