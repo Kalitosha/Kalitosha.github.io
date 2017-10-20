@@ -5,6 +5,7 @@ html {
     display: block;
 	width:100vw;
 	height: 100vh;
+	min-height:212
 }
 					
 body {
@@ -41,7 +42,7 @@ body {
 	margin-right:auto;	
     padding-top: 20px;
 	width:100vw;
-	height: 700px;
+	height: 600px;
 	background-position: center top;
 	background-color: rgb(164, 216, 218);
 }
@@ -153,13 +154,13 @@ body {
 	width:400px;
 	font-family: 'Tenor Sans', sans-serif;
 }
-
-#header_content_boxcontent { /*коробочка с текстом в портфолио*/
+/*
+#header_content_boxcontent { 
     width: 400px;
 	font-size:23px;
 	color:#333333;
 	font-family: 'Tenor Sans', sans-serif;
-}
+}*/
 
 #header_content_lowerboxcontent {
 	width:100vw;
@@ -179,10 +180,11 @@ body {
 	width:1349px;
 }
 
-#header_lower {
+#im {
 	width:400px;
-	float:left;
-	margin-right:40px;
+	float:right;
+	margin-left:15px;
 	text-align:justify;
+	display: inline-block; /* Строчно-блочный элемент */
 }
 
