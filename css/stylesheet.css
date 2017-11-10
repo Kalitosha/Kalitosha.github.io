@@ -4,7 +4,6 @@ html {
     display: block;
 	width:100vw;
 	height: 100vh;
-	min-height:212
 }
 					
 body {
@@ -51,7 +50,7 @@ body {
 }
 
 #main_container {
-	text-align:justify; /*значение justify растягивание текста по ширине  text-align:center;*/
+	text-align:justify; /*значение justify растягивание текста по ширине  */
 	padding-top: 10px;
 	color: #93e4e3;	
 	height:465px;
@@ -87,7 +86,7 @@ body {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;	
+	/*vertical-align: baseline;	*/
 }
 
 #bottom_bar {
@@ -118,24 +117,7 @@ body {
 	width:100vw;
     height: 45px;
 	font-family: 'Tenor Sans', sans-serif;
-	/*font-family: 'Prata', serif;*/
     padding-bottom: 20px;
-}
-
-#header_content_lowerline {
-	text-align:center;
-	font-size:35px;
-	color:#FFFFFF;
-	width:400px;
-	font-family: 'Tenor Sans', sans-serif;
-}
-
-#header_content_lowerboxcontent {
-	width:100vw;
-    height: 60px;
-    padding-left: 60px;
-	font-size:23px;
-	color: #93e4e3;
 }
 
 #im {
