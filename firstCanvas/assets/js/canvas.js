@@ -3,11 +3,8 @@ var ctx = canvas.getContext('2d'); // задаем контекст
 
 window.addEventListener('resize', resizeCanvas, false);
 
-// var Width, Height;
-
 Width = document.documentElement.clientWidth;
 Height = document.documentElement.clientHeight;
-
 
 var gall = 0;
 var imgBall = new Image();  // Создание нового объекта изображения
@@ -20,7 +17,6 @@ window.onload = function () {
 
     canvas.width = document.documentElement.clientWidth;
     canvas.height = document.documentElement.clientHeight;
-
 
     var fonMus = document.getElementById('fonMusic'); // фоновая музыка
     //fonMus.play();
