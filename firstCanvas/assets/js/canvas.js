@@ -144,8 +144,7 @@ function draw() {
     // ctx.fillText(ball.vy, 170, 40);
 
     //счет
-    // ctx.fillStyle = 'rgb(80, 110, 110)';
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'rgb(80, 110, 110)';
     ctx.font = "100px Comic Sans MS";
     ctx.fillText(":", Width/2 - 14, Height/2 + 31);
     ctx.textAlign = "right";
