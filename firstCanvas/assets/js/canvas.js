@@ -2,11 +2,10 @@
 var ctx = canvas.getContext('2d'); // задаем контекст
 
 window.addEventListener('resize', resizeCanvas, false);
-// canvas.addEventListener("touchmove", touchMove, false);
 
-document.body.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-}, false); // Предотвращение скролла
+// document.body.addEventListener('touchmove', function(e) {
+//     e.preventDefault();
+// }, false); // Предотвращение скролла
 
 // var Width, Height;
 
@@ -42,11 +41,10 @@ var mouseMove = function(e) {
     platform2.y = e.clientY - platform2.h/2;
 }
 
-// var touchMove = function (e) {
 document.addEventListener('touchmove', function(e) {
-        e.preventDefault();
+        e.preventDefault(); // отключаем промотку
         e.stopPropagation();
-        /* Здесь ваш код обработки события*/
+        /* далее код обработки события*/
     if (e.targetTouches.length == 1) {
         var touch = e.targetTouches[0];
 
@@ -54,17 +52,6 @@ document.addEventListener('touchmove', function(e) {
         platform2.y = touch.pageY - platform2.h / 2;
     }
     }, false);
-    // if (event.targetTouches.length == 1) {
-    //     var touch = event.targetTouches[0];
-    //     // Place element where the finger is
-    //     obj.style.left = touch.pageX + 'px';
-    //     obj.style.top = touch.pageY + 'px';
-    // }
-//     if (event.targetTouches.length == 1) {
-//         platform1.y = e.touchAction.pageY - platform1.h / 2;
-//         platform2.y = e.touchAction.pageY - platform2.h / 2;
-//     }
-// }
 
 var ball = {
     color : 'black',
