@@ -126,7 +126,7 @@ function draw() {
 
     ctx.strokeStyle = 'rgb(67, 100, 100)';
     ctx.beginPath();
-    ctx.moveTo(Width/2, 0);
+    ctx.moveTo(Width/2, 0); 
     ctx.lineTo(Width/2, Height);
 
     // ctx.moveTo(0, Height/2);
