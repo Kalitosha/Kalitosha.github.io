@@ -141,8 +141,8 @@ function draw() {
     ctx.moveTo(Width/2, 0);
     ctx.lineTo(Width/2, Height);
 
-    // ctx.moveTo(0, Height/2);
-    // ctx.lineTo( Width,Height/2);
+    ctx.moveTo(0, Height/2);
+    ctx.lineTo( Width,Height/2);
     ctx.stroke();
 
     // ctx.fillStyle = 'rgb(80, 110, 110)';
