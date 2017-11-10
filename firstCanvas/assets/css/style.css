@@ -2,9 +2,6 @@
 
 body {
     padding: 0px;
-    /*background-attachment: scroll;*/ /*перемещает фон вместе с содержимым*/
-    /*background-color:RGB(190, 253, 252);
-	background-repeat: repeat-x;*/
     background-position: left top;
     margin: 0;
     display: flex;
@@ -13,9 +10,7 @@ body {
 }
 
 #myCanvas{
-
-    background-color: darkslategray; /*midnightblue;  /*aliceblue;*/
-    /*border: 0.1px solid rgb(70, 190, 197);*/
+    background-color: darkslategray;
 	margin:0.1px;
 	padding:0;
 }

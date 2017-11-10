@@ -19,7 +19,7 @@ window.onload = function () {
     canvas.height = document.documentElement.clientHeight;
 
     var fonMus = document.getElementById('fonMusic'); // фоновая музыка
-    //fonMus.play();
+    fonMus.play();
     fonMus.volume = 0.1;
 
     imgBall.src ='assets\\images\\ball.png';  // Путь к изображению которое необходимо нанести на холст
@@ -75,7 +75,6 @@ function Rect(color, x, y) {
         ctx.drawImage(imgPlatform, this.x, this.y, this.w, this.h);
     };
 }
-
 
 function init() {
 
