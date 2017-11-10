@@ -1,6 +1,10 @@
 ﻿var canvas = document.getElementById('myCanvas'); // подключаем canvas
 var ctx = canvas.getContext('2d'); // задаем контекст
 
+document.body.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+}, false); // Предотвращение скролла
+
 window.addEventListener('resize', resizeCanvas, false);
 // canvas.addEventListener("touchmove", touchMove, false);
 
@@ -31,8 +35,16 @@ var mouseMove = function(e) {
 }
 
 var touchMove = function (e) {
-    platform1.y = e.clientY - platform1.h/2;
-    platform2.y = e.clientY - platform2.h/2;
+
+    // if (event.targetTouches.length == 1) {
+    //     var touch = event.targetTouches[0];
+    //     // Place element where the finger is
+    //     obj.style.left = touch.pageX + 'px';
+    //     obj.style.top = touch.pageY + 'px';
+    // }
+
+    platform1.y = e.touchAction.pageY - platform1.h/2;
+    platform2.y = e.touchAction.pageY - platform2.h/2;
 }
 
 var ball = {
@@ -161,7 +173,7 @@ function draw() {
 
     canvas.onmousemove = mouseMove;
     canvas.onmousedown = onMouseDown;
-    canvas.touchmove = mouseMove; // TODO проверить
+    canvas.touchmove = touchMove; // TODO проверить
     canvas.touchend = onMouseDown; // убрали палец
 
     window.requestAnimationFrame(draw);
