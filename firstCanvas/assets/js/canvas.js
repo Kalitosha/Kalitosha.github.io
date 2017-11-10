@@ -3,10 +3,6 @@ var ctx = canvas.getContext('2d'); // задаем контекст
 
 window.addEventListener('resize', resizeCanvas, false);
 
-// document.body.addEventListener('touchmove', function(e) {
-//     e.preventDefault();
-// }, false); // Предотвращение скролла
-
 // var Width, Height;
 
 Width = document.documentElement.clientWidth;
@@ -41,17 +37,20 @@ var mouseMove = function(e) {
     platform2.y = e.clientY - platform2.h/2;
 }
 
-document.addEventListener('touchmove', function(e) {
-        e.preventDefault(); // отключаем промотку
-        e.stopPropagation();
+document.addEventListener(
+    'touchmove',
+    function(e) {
+        e.preventDefault(); // Предотвращение скролла
+        e.stopPropagation(); //останавливает "всплытие" вызова события к родительским элементам
         /* далее код обработки события*/
-    if (e.targetTouches.length == 1) {
-        var touch = e.targetTouches[0];
+        if (e.targetTouches.length == 1) {
+            var touch = e.targetTouches[0];
 
-        platform1.y = touch.pageY - platform1.h / 2;
-        platform2.y = touch.pageY - platform2.h / 2;
+            platform1.y = touch.pageY - platform1.h / 2;
+            platform2.y = touch.pageY - platform2.h / 2;
+        }
     }
-    }, false);
+);
 
 var ball = {
     color : 'black',
@@ -107,8 +106,6 @@ function init() {
                 ctx.drawImage(imgBall, this.x, this.y, this.r, this.r);
         }
     };
-    //ball = new Ball('RGB(250, 220, 100)', Width/2, Height/2, Height/40);
-
     draw();
 }
 function resizeCanvas() {
@@ -136,21 +133,20 @@ function resizeCanvas() {
         }
         else if (gall == 2){
 
-            ball.x = platform1.x + platform1.w; // + ball.r;
+            ball.x = platform1.x + platform1.w;
         }
         else{
             ball.x = ball.x * document.documentElement.clientWidth/Width;
         }
         ball.y = ball.y * document.documentElement.clientHeight/Height;
         /*************************************************************************************/
-        Width = document.documentElement.clientWidth; // window.innerWidth;
-        Height = document.documentElement.clientHeight; // window.innerHeight;
+        Width = document.documentElement.clientWidth;
+        Height = document.documentElement.clientHeight;
         /*************************************************************************************/
 }
 
 function draw() {
     ctx.clearRect(0, 0, Width, Height); // стираем
-
 
     ctx.strokeStyle = 'rgb(67, 100, 100)';
     ctx.beginPath();
