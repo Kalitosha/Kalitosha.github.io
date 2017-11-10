@@ -126,7 +126,7 @@ function draw() {
 
     ctx.strokeStyle = 'rgb(67, 100, 100)';
     ctx.beginPath();
-    ctx.moveTo(Width/2, 0); 
+    ctx.moveTo(Width/2, 0);
     ctx.lineTo(Width/2, Height);
 
     // ctx.moveTo(0, Height/2);
@@ -144,7 +144,8 @@ function draw() {
     // ctx.fillText(ball.vy, 170, 40);
 
     //счет
-    ctx.fillStyle = 'rgb(80, 110, 110)';
+    // ctx.fillStyle = 'rgb(80, 110, 110)';
+    ctx.fillStyle = 'red';
     ctx.font = "100px Comic Sans MS";
     ctx.fillText(":", Width/2 - 14, Height/2 + 31);
     ctx.textAlign = "right";
