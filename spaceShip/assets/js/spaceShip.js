@@ -442,7 +442,7 @@ document.addEventListener(
         /* далее код обработки события*/
         if (e.targetTouches.length === 1) {
             var touch = e.targetTouches[0];
-
+            isTouch === true;
             player.x = touch.pageX - player.w/2;
         }
     }
