@@ -66,7 +66,7 @@ var player = {
         explM1.pause();
         explM1.currentTime = 0.0;
         ctx.drawImage(shipExpIm, this.x-this.w/2, this.y-this.h*3/2 , this.w*2, this.h*2);
-        explM1.play();
+        //explM1.play();
     },
 
     drawScore: function () {
@@ -223,7 +223,7 @@ function CheckCollision() {
 
                 explM2.pause();
                 explM2.currentTime = 0.0;
-                explM2.play();
+                // explM2.play();
 
                 player.score++;
                 lazers.splice(lazers.indexOf(currentL), 1);
@@ -324,6 +324,7 @@ function reDraw() {
 
     canvas.touchstart = touchStart; // Tap (Косание)
     if(isTouch){
+        lazerLoaded = true;
         lazers.push(new Lazer());
         lazerLoaded = false;
     }
@@ -442,7 +443,7 @@ document.addEventListener(
         /* далее код обработки события*/
         if (e.targetTouches.length === 1) {
             var touch = e.targetTouches[0];
-            isTouch === true;
+            // isTouch === true;
             player.x = touch.pageX - player.w/2;
         }
     }
@@ -458,10 +459,10 @@ function touchStart(){
             player.score = 0;
             break;
         case 'play':
-            if (lazerLoaded) {
-                lazers.push(new Lazer());
-                lazerLoaded = false;
-            }
+            // if (lazerLoaded) {
+                // lazers.push(new Lazer());
+                // lazerLoaded = false;
+            // }
             break;
         case 'end':
             gameStatus = 'start';
