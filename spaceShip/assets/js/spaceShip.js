@@ -6,7 +6,6 @@ document.addEventListener("keyup", KeyUp, true);
 
 var gameStatus = 'start'; // start, play, end
 var keys = [false, false, false];
-var isTouch = false;
 
 var explIm = new Image();
 explIm.src = 'assets\\images\\spriteMapExpl.png';
@@ -40,7 +39,7 @@ window.onload = function () {
     var bgAudio = new Audio('assets\\audio\\BackgroundMusic.mp3');
 
     bgAudio.volume = 0.1;
-    //bgAudio.play();
+    bgAudio.play();
 
     explM1 = new Audio('assets\\audio\\explosion1.mp3');
     explM2 = new Audio('assets\\audio\\explosion2.mp3');
@@ -66,7 +65,7 @@ var player = {
         explM1.pause();
         explM1.currentTime = 0.0;
         ctx.drawImage(shipExpIm, this.x-this.w/2, this.y-this.h*3/2 , this.w*2, this.h*2);
-        //explM1.play();
+        explM1.play();
     },
 
     drawScore: function () {
@@ -99,7 +98,7 @@ function Lazer() {
     this.drawL = function () {
         ctx.fillStyle = "#ff9500";
         ctx.shadowColor = "#ff9500";
-        // ctx.shadowBlur = 15;
+        ctx.shadowBlur = 15;
         this.y -= this.lazerSpeed;
         ctx.fillRect(this.x, this.y, 2, 18);
         ctx.shadowBlur = 0;
@@ -223,7 +222,7 @@ function CheckCollision() {
 
                 explM2.pause();
                 explM2.currentTime = 0.0;
-                // explM2.play();
+                explM2.play();
 
                 player.score++;
                 lazers.splice(lazers.indexOf(currentL), 1);
@@ -323,11 +322,6 @@ function reDraw() {
     canvas.onmousedown = onMouseDown;
 
     canvas.touchstart = touchStart; // Tap (Косание)
-    if(isTouch){
-        lazerLoaded = true;
-        lazers.push(new Lazer());
-        lazerLoaded = false;
-    }
 
     if ( (backgroundHeight > HEIGHT) && (backgroundHeight % bgIm.height) === 0 ) // % чтобы не дергался
         backgroundHeight = 0;
@@ -443,7 +437,6 @@ document.addEventListener(
         /* далее код обработки события*/
         if (e.targetTouches.length === 1) {
             var touch = e.targetTouches[0];
-            // isTouch === true;
             player.x = touch.pageX - player.w/2;
         }
     }
@@ -451,7 +444,6 @@ document.addEventListener(
 
 function touchStart(){
 
-    isTouch === true;
     switch (gameStatus){
         case 'start':
             gameStatus = 'play';
@@ -459,10 +451,10 @@ function touchStart(){
             player.score = 0;
             break;
         case 'play':
-            // if (lazerLoaded) {
-                // lazers.push(new Lazer());
-                // lazerLoaded = false;
-            // }
+            if (lazerLoaded) {
+                lazers.push(new Lazer());
+                lazerLoaded = false;
+            }
             break;
         case 'end':
             gameStatus = 'start';
