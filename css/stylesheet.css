@@ -43,7 +43,7 @@ ul, li {
 	margin: 1px 0;
 	padding: 0;
 	list-style-type: none; /*Отменяет маркеры для списка*/
-	background-color: rgb(102, 81, 83);
+	/*background-color: rgb(102, 81, 83);*/
 	font-size:22px;
 }
 
@@ -98,7 +98,7 @@ nav .wrapper {
 	display: none;
 }
 
-.content_container {
+.content_container {	
 	display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -134,16 +134,24 @@ nav .wrapper {
 }
 
 #about_myself {
+	margin: 0px 30px 0px 30px;
 	box-sizing: border-box;
-	flex: 1 1 75%;
+	flex: 1 1 55%;
 	text-align: justify;
 }
 
 .logo_image {
+	margin: 0px;
+	padding: 0px;
 	text-align: center;
 	box-sizing: border-box;
-	flex: 1 1 25%;
+	flex: 0 1 20%;
 }
+
+.logo_image img {
+	max-width: 130px;
+}
+
 .top_bar_im1 {
 	background-position: center top;
 	width:100vw;	
@@ -219,40 +227,41 @@ nav .wrapper {
 
 /********************************слайдер********************************************/
 #slider {
-	padding: 0px 10px 20px 10px;
+	margin: 10px 20px 20px 20px;
 }
 
 ul.accordion {
 	display: flex;
 	justify-content: center;
 	margin: 0;
-	padding: 0;
+	padding: 0;	
 }
 
 ul.accordion li {
 	width: 150px;
+	height: 30vw;
 	overflow: hidden;
 	cursor: pointer; /* курсор при наведении */
 	display: block;
 	box-shadow: 1px 3px 15px black;
 	transition: all 2s;
+	margin: 0;
+	padding: 0;
 }
 
-ul.accordion img{
-	width: 100vh;
-	height: 100%;
+ul.accordion img{ 
+	height: 30vw; /*относительно ширины окна браузера*/
 }
 
 ul.accordion li:hover {
-	width: 99vh;
+	width: 70vw;
 	box-shadow: 1px 3px 15px #eee;
 	transition: all 1s; 
 }
 
 /* это для серединной картинки */
-/* тут начинается какая-то жесть */
 ul.accordion li:nth-child(4){
-	width: 99vh;
+	width: 60vw;
 }
 
 ul.accordion:hover li:nth-child(4){
@@ -260,7 +269,7 @@ ul.accordion:hover li:nth-child(4){
 }
 
 ul.accordion li:nth-child(4):hover{
-	width: 99vh;
+	width: 60vw;
 }
 /*****************************************галерея*********************************/
 
@@ -327,4 +336,12 @@ ul.accordion li:nth-child(4):hover{
 	#menu_check:checked + .menu {
 		display: block;
 	}
+/***************************************************/
+	/*ul.accordion li:nth-child(4){
+		width: 50vh;
+	}
+
+	ul.accordion li {
+		width: 50px;
+	}*/
 }
