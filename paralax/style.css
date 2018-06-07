@@ -1,0 +1,67 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+html {
+  background-color: rgb(245, 210, 220);
+}
+
+.parallax-container { /* Parent element for all three layers */
+  height: 100vh;
+  overflow-x: hidden; /* Restrict scroll movement with overflow */
+  overflow-y: scroll;
+  perspective: 2px;
+  /* 
+    IMPORTANT! Parent's perspective property determines strength of perspective effect 
+  */
+}
+
+.layer { /* These are values shared by all three layers. */
+  position: absolute; /* Layer positioning is important */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+
+  padding-top: 10vh; 
+  padding-bottom: 100vh; /* Padding creates more room on the bottom so layers can scroll farther */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.back {
+  transform: translateZ(-3px) scale(2.5);
+  /* 
+    IMPORTANT! 
+      TranslateZ: TranslateZ pushes layer back so it scrolls slower and appears 
+      farther away. 
+      
+      Scale: Scale will scale layer back up to fit screen while retaining 
+      perspective effect. The value of scale depends on the values of 
+      perspective (see parent element above) and translateZ (for the given 
+      layer). The formula is: 
+        ((translateZ * -1) / perspective) + 1 
+  */
+  background-image: url("img/mountain.png");
+}
+
+.midd {
+  transform: translateZ(-1px) scale(1.5);
+  /* Here, the translateZ value is closer to foreground value than background
+  value, so the midground will seem to be pretty close to the foreground
+  and will scroll pretty fast.  */
+  background-image: url("img/treeline-midd.png");
+}
+
+.fore {
+  transform: translateZ(0);
+  /* Zero value for translateZ property makes foreground scroll normally.
+  No scale value is needed because this layer is not translated.
+  NOTE: TranslateZ value can be greater than 0 for extreme foreground. */
+  background-image: url("img/treeline-fore.png");
+  height: 100vh;
+}
+
+/* Learn more about CSS parallax: http://keithclark.co.uk/articles/pure-css-parallax-websites/ */
