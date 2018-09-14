@@ -40,10 +40,10 @@ i.fa.fa-bars {
 }
 
 ul, li {
-	margin: 1px 0;
-	padding: 0;
+	margin: 0px 0px;
+	padding: 0px;
 	list-style-type: none; /*Отменяет маркеры для списка*/
-	/*background-color: rgb(102, 81, 83);*/
+	//background-color: rgba(164, 216, 218, 0);
 	font-size:22px;
 }
 
@@ -51,6 +51,7 @@ a {
 	color: #92b8b9;	
 	font-family: 'Tenor Sans', sans-serif;
 	text-decoration: none;
+	text-align: center;
 }
 
 .clearfix::after {
@@ -79,17 +80,26 @@ nav .wrapper {
 
 .menu li {
 	float: left;
+	background-color: rgba(164, 216, 218, 0);
 }
 
 .menu li a {
 	display: inline-block;
-	padding: 0px 15px;
-	box-shadow: inset 0px -3px 3px 0px #554445;
+	padding: 0px;
+	margin: 0px 10px 0px 0px;
+	box-shadow: 0px 0px 0px 1px #554445;
+	//background-color: rgba(164, 216, 218, 0.1);
+	width: 100%;
+}
+
+.menu li a:hover{
+	box-shadow: inset 0px 0px 20px 0px #eeeeee4d;
+	//box-shadow: 1px 3px 15px #eee;
 }
 
 .menu_hamburger {
 	width: 100%;
-	padding: 0px 15px;
+	padding: 0px 10px;
 	display: none;
 	cursor: pointer; /*меняет значок мышки*/
 }
@@ -318,15 +328,24 @@ ul.accordion li:nth-child(4):hover{
 	}
 }
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 920px) {
 	.menu {
 		display: none;
 		position: absolute;
-		background: #eee;
+		//background: rgba(86, 126, 136, 0.76);
 	}
 
 	.menu li {
 		float: none;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	.menu li a {
+		padding: 0px;
+		margin: 0px;
+		background: rgba(86, 126, 136, 0.9);
+		box-shadow: 0px 0px 1px 2px #554445;
 	}
 
 	.menu_hamburger {
