@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>modal window</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/82F67202-54A2-8040-B83C-565D88B6ECED/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/DECE6B88D565-C38B-0408-2A45-20276F28/abn/main.css"/></head>
+<body>
+	<div class="gallery g1">
+		<span class="tag t1" onclick="openWin(1);"><img src="img/1.jpg"></span>
+		
+		<span class="tag t2" onclick="openWin(2);"><img src="img/2.jpg"></span>
+		
+		<span class="tag t3" onclick="openWin(3);"><img src="img/3.jpg"></span>
+		
+		<span class="tag t4" onclick="openWin(4);"><img src="img/4.jpg"></span>
+		
+		<span class="tag t5" onclick="openWin(5);"><img src="img/5.jpg"></span>
+		
+		<span class="tag t6" onclick="openWin(6);"><img src="img/6.jpg"></span>
+		
+		<span class="tag t7" onclick="openWin(7);"><img src="img/7.jpg"></span>
+		
+		<span class="tag t8" onclick="openWin(8);"><img src="img/1.jpg"></span>
+		
+		<span class="tag t9" onclick="openWin(9);"><img src="img/2.jpg"></span>
+	</div>	
+
+	<div id="modal" onclick="closeModal();" onselectstart="return false">
+		<div id="close_modal" onclick="closeModal();">&#10006;</div>
+		<form id="m_image"> </form>	   
+		<div id="btns">
+	   		<div class="btn b_left"> < </div>
+	    	<div class="btn b_right"> > </div>			
+		</div>	   
+	</div>
+	
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
