@@ -326,6 +326,13 @@ class GameLoop {
   }
 
   drawBackground(ctx) { //TODO иногда текструра не состыкуется (возможно надо поискать другую картинку или еще подумать над алгоритмом)
+        if (this.backgroundHeight + this.bgSpeed < HEIGHT) {
+      this.backgroundHeight += this.bgSpeed;
+    }
+    else {
+      this.backgroundHeight = 0;
+    }
+    
     let bgW = 0;
     let bgH = this.backgroundHeight;
 
@@ -350,12 +357,6 @@ class GameLoop {
       bgH = this.backgroundHeight - HEIGHT - this.bgIm.height;
     }
 
-    if (this.backgroundHeight + this.bgSpeed < HEIGHT) {
-      this.backgroundHeight += this.bgSpeed;
-    }
-    else {
-      this.backgroundHeight = 0;
-    }
   }
 
   gamePlay(ctx, space) {
